@@ -7,7 +7,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
- * 对于默认的OptionPane的美化 ！！！！！！该部分大量引用自网络！！！！！！！！
+ * 对于默认的OptionPane的美化
  */
 public class MyOptionPane {
     private static int result = 0;
@@ -294,7 +294,7 @@ public class MyOptionPane {
 
         // 微软雅黑
         public static Font BASIC_FONT = new Font("微软雅黑", Font.PLAIN, 12);
-        public static Font BASIC_FONT2 = new Font("微软雅黑", Font.TYPE1_FONT, 12);
+        public static Font BASIC_FONT2 = new Font("微软雅黑", Font.BOLD, 12);
         // 楷体
         public static Font DIALOG_FONT = new Font("楷体", Font.PLAIN, 16);
 
@@ -304,5 +304,7 @@ public class MyOptionPane {
 
         public static int NO_OPTION = 1;
         public static int YES_OPTION = 0;
+
     }
+
 }

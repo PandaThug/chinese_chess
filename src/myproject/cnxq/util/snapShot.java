@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+
 /**
  * 用于截图的功能类
  */
@@ -22,27 +23,16 @@ public class snapShot{
         Robot robot = new Robot();
         //利用robot进行截图
         BufferedImage image = robot.createScreenCapture(screenRectangle);
-        BufferedImage subimage = image.getSubimage(leftUpPoint.x,leftUpPoint.y,windowsize.width,windowsize.height);
+        BufferedImage subImage = image.getSubimage(leftUpPoint.x,leftUpPoint.y,windowsize.width,windowsize.height);
         //输出到文件
         File screenFile = new File(fileName);
         if (!screenFile.exists()) {
             screenFile.mkdir();
         }
         File f = new File(screenFile, folder);
-        ImageIO.write(subimage, "png", f);
+        ImageIO.write(subImage, "png", f);
         if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.OPEN))
             Desktop.getDesktop().open(f);
     }
-//    public static void main(String[] args) throws InterruptedException {
-////        snapShot test = new snapShot();
-////        test.setSize(400,200);
-////        test.setLocation(300,500);
-////        test.setVisible(true);
-//        Thread.sleep(1000);
-//        try{
-//            snapShot("e:\\你好","11.png",test);
-//        }catch(Exception e){
-//            e.printStackTrace();;
-//        }
-//    }
+
 }

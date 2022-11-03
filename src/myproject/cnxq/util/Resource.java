@@ -19,7 +19,8 @@ public class Resource {
         }
         return inputStream;
     }
-    //获取图片
+
+    // 获取图片
     public static BufferedImage getImage(String name){
         InputStream inputStream = getStream(name);
         try {
@@ -28,7 +29,8 @@ public class Resource {
             throw new RuntimeException("加载资源失败:"+name,e);
         }
     }
-    //或许icon
+
+    // 获取icon
     public static ImageIcon getIcon(String name){
         ImageIcon imageIcon = new ImageIcon();
         imageIcon.setImage(getImage(name));
